@@ -1,34 +1,21 @@
 import React from "react";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Feed from "./utils/feed";
 import Post from "./utils/Post";
 import TweetBox from "./utils/TweetBox";
-//import { useState, useEffect } from "react";
 
 function App() {
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-        /* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */
-    //   </header>
-    // </div>
-    <div className="app">
-          
-      <TweetBox/>
-          
-        </div>
+    <Router>
+      <div className="app">
+        <Routes>
+          <Route path="/" element={<TweetBox />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/post" element={<Post />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
