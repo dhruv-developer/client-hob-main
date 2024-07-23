@@ -1,13 +1,81 @@
+/* App.css */
+
 body {
   --twitter-color: #50b7f5;
   --twitter-background: #e6ecf0;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--twitter-background);
 }
 
 .app {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 10px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tweetBox {
+  width: 100%;
+  max-width: 600px;
+  background-color: #f5efe5;
+  border: 1px solid #e1e8ed;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tweetBox input,
+.tweetBox textarea {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #e1f0fa;
+}
+
+.tweetBox input:focus,
+.tweetBox textarea:focus {
+  outline: none;
+  background-color: #c9d6df;
+}
+
+.tweetBox button {
+  background-color: var(--twitter-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tweetBox button:hover {
+  background-color: #000000;
+}
+
+/* Utility classes for layout and alignment */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
 }

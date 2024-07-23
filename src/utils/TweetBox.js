@@ -60,7 +60,7 @@ function TweetBox() {
           <input
             onChange={(e) => setTweetMessage(e.target.value)}
             value={tweetMessage}
-            placeholder="What's happening?"
+            placeholder="Share your Post"
             type="text"
           />
         </div>
@@ -77,7 +77,7 @@ function TweetBox() {
           type="submit"
           className="tweetBox__tweetButton"
         >
-          Tweet
+          Post
         </Button>
       </form>
     </div>
