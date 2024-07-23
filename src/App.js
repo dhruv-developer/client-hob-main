@@ -3,6 +3,7 @@ import React from "react";
 import './App.css';
 import Feed from "./utils/feed";
 import Post from "./utils/Post";
+import TweetBox from "./utils/TweetBox";
 //import { useState, useEffect } from "react";
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
     // </div>
     <div className="app">
           
-      <Post/>
+      <TweetBox/>
           
         </div>
   );
